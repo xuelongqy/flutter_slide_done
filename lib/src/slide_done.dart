@@ -298,6 +298,7 @@ class SlideDoneState extends State<SlideDone> with TickerProviderStateMixin<Slid
     // 结束文字
     Widget endText = _getEndText();
     return new Card(
+      clipBehavior: Clip.hardEdge,
       color: widget.backgroundColor,
       elevation: widget.elevation,
       shape: widget.shape ?? RoundedRectangleBorder(
@@ -359,6 +360,7 @@ class SlideDoneState extends State<SlideDone> with TickerProviderStateMixin<Slid
               width: widget.height - widget.padding * 2,
               height: widget.height - widget.padding * 2,
               child: Card(
+                clipBehavior: Clip.hardEdge,
                 elevation: widget.buttonElevation,
                 margin: EdgeInsets.all(0.0),
                 color: iconColor,
