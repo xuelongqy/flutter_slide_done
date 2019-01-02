@@ -16,9 +16,9 @@ SlideDone的灵感来源于滑动解锁，可以将它定义为滑动开关，�
  - 支持单向与双向，初始化默认位置
 
 ## Demo
-[下载 APK-Demo](https://github.com/xuelongqy/flutter_easyrefresh/raw/master/art/pkg/EasyRefresh.apk)
+[下载 APK-Demo](https://github.com/xuelongqy/flutter_slide_done/raw/master/art/pkg/SlideDone.apk)
 
-![](https://raw.githubusercontent.com/xuelongqy/flutter_easyrefresh/master/art/image/apk_QRCode.png)
+![](https://github.com/xuelongqy/flutter_slide_done/raw/master/art/image/apk_QRCode.png)
 
 ## 项目演示
 |Example|
