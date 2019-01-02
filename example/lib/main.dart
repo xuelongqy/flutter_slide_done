@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Slide done demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -27,6 +27,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // SlideDone key
+  GlobalKey<SlideDoneState> slideDoneKey = new GlobalKey<SlideDoneState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.grey,
                 ),
                 SlideDone(
+                  key: slideDoneKey,
                   onStart: () async {
                     await Future.delayed(Duration(seconds: 2), (){});
                   },
@@ -73,6 +77,28 @@ class _MyHomePageState extends State<MyHomePage> {
                     await Future.delayed(Duration(seconds: 2), (){});
                   },
                 ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 10.0),
+                  width: double.infinity,
+                  height: 10.0,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    FlatButton(
+                      onPressed: (){
+                        slideDoneKey.currentState.callOnStart();
+                      },
+                      child: Text("Start")
+                    ),
+                    FlatButton(
+                      onPressed: (){
+                        slideDoneKey.currentState.callOnEnd();
+                      },
+                      child: Text("End")
+                    ),
+                  ],
+                )
               ],
             )
         )
